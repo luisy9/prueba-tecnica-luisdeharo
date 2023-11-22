@@ -48,8 +48,22 @@ class SpaController extends Controller
         return $dogs;
     }
 
-    public function getDog($opcion){
-        $columna = Perros::pluck($opcion)->toArray();
-        return $columna;
+    public function getColum($opcion)
+    {
+        $valores = Perros::pluck($opcion)->toArray();
+        return response()->json([
+            'nombreColumna' => $opcion,
+            'valores' => $valores,
+        ]);
+    }
+
+    public function filtroDog($filtroRaza)
+    {
+        $perros = Perros::where('tamaño', $filtroRaza)
+            ->where('color_del_pelo', $filtroRaza)
+            ->where('tamaño', $filtroRaza)
+            ->get();
+
+        return $perros;
     }
 }

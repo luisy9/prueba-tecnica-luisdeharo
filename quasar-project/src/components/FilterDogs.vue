@@ -35,29 +35,66 @@
                 outlined
                 dense
               />
-              <q-btn color="primary" label="Buscar" />
+              <q-btn color="primary" label="Buscar" @click="filterDog" />
             </div>
           </q-card>
         </div>
         <div class="q-pa-md">
-          <q-table :rows="this.perros" row-key="id">
-            <template v-slot:body="props">
-              <q-tr :props="props">
-                <q-td v-for="columna in columnas" :key="columna.field">
-                  <q-td v-if="columna.name === 'foto'">
-                    {{ console.log(`${props.row[columna.field]}`) }}
-                    <img
-                      :src="`../../../../${props.row[columna.field]}`"
-                      style="max-width: 100px; max-height: 100px"
-                    />
+          <div
+            v-if="
+              opcion === 'raza' ||
+              opcion === 'tamaño' ||
+              opcion === 'color_del_pelo'
+            "
+          >
+            <div v-if="this.columnasUnicas">
+              <q-table :rows="perroFil.valores" row-key="id">
+                <template v-slot:body="props">
+                  <q-tr :props="props">
+                    <q-td>
+                      {{ props.row }}
+                    </q-td>
+                  </q-tr>
+                </template>
+              </q-table>
+            </div>
+            <!-- <q-table :rows="this.perros" row-key="id">
+              <template v-slot:body="props">
+                <q-tr :props="props">
+                  <q-td v-for="columna in columnas" :key="columna.field">
+                    <q-td v-if="columna.name === 'foto'">
+                      <img
+                        :src="`../../../../${props.row[columna.field]}`"
+                        style="max-width: 100px; max-height: 100px"
+                      />
+                    </q-td>
+                    <q-td>
+                      {{ props.row[columna.field] }}
+                    </q-td>
                   </q-td>
-                  <q-td v-else>
-                    {{ props.row[columna.field] }}
+                </q-tr>
+              </template>
+            </q-table> -->
+          </div>
+          <div v-else>
+            <q-table :rows="this.perros" row-key="id">
+              <template v-slot:body="props">
+                <q-tr :props="props">
+                  <q-td v-for="columna in columnas" :key="columna.field">
+                    <q-td v-if="columna.name === 'foto'">
+                      <img
+                        :src="`../../../../${props.row[columna.field]}`"
+                        style="max-width: 100px; max-height: 100px"
+                      />
+                    </q-td>
+                    <q-td>
+                      {{ props.row[columna.field] }}
+                    </q-td>
                   </q-td>
-                </q-td>
-              </q-tr>
-            </template>
-          </q-table>
+                </q-tr>
+              </template>
+            </q-table>
+          </div>
         </div>
       </q-page>
     </q-page-container>
@@ -75,7 +112,9 @@ export default {
       filtroPelo: "",
       opcion: "",
       perros: [],
+      perroFil: [],
       columnas: [],
+      columnasUnicas: [],
     };
   },
 
@@ -94,20 +133,36 @@ export default {
   },
 
   methods: {
-    dogSearch() {},
+    filterDog() {
+      axios
+        .get(`http://127.0.0.1:8000/api/filtroDog/${this.filtroRaza}`)
+        .then((response) => {
+          console.log(response);
+        });
+    },
 
-    handleRadioClick(opcion) {
-      axios.get(`http://127.0.0.1:8000/api/getDog/${opcion}`).then((response) => {
-        this.perros = response.data;
-        if (this.perros.length > 0) {
-          this.columnas = Object.keys(this.perros[0]).map((e) => ({
-            name: e,
-            label: e,
+    async handleRadioClick(opcion) {
+      await axios
+        .get(`http://127.0.0.1:8000/api/getColum/${opcion}`)
+        .then((response) => {
+          this.perroFil = response.data;
+          // console.log(this.perros.nombreColumna);
+
+          // for (let i = 0; i < this.perros.length; i++) {
+          //   console.log(this.perros[i]);
+          // }
+          // console.log(this.columnas);
+          // Object.keys(this.perros[0]).map((e, index)=> {
+          //   console.log()
+          // })
+          this.columnasUnicas = {
+            name: this.perroFil.nombreColumna,
+            label: this.perroFil.nombreColumna,
             align: "left",
-            field: e,
-          }));
-        }
-      });
+            field: this.perroFil.nombreColumna,
+          };
+          // console.log(this.columnas);
+        });
     },
   },
 };

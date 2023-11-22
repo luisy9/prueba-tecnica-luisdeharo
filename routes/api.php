@@ -26,7 +26,10 @@ Route::post('saveDog', [SpaController::class, 'saveDog']);
 Route::get('getDogs', [SpaController::class, 'getDogs']);
 
 //Filtrado todos los perros
-Route::get('/getDog/${opcion}', [SpaController::class, 'getDog']);
+Route::get('getColum/{opcion}', [SpaController::class, 'getColum']);
+
+//Filtrado todos los perros
+Route::get('filtroDog/{filtroRaza}', [SpaController::class, 'filtroDog']);
 
 //Get Img de la ruta /perros
 Route::get('storage/{filename}', function ($filename) {
