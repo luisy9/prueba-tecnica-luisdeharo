@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Buscador de perros
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -28,7 +28,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          Menu
         </q-item-label>
 
         <EssentialLink
@@ -51,16 +51,16 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Home',
+    caption: 'Pagina Principal',
+    icon: 'home',
+    link: '/'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    title: 'Buscar',
+    caption: 'Busca a tu perro!',
+    icon: 'search',
+    link: '/#/search'
   },
   {
     title: 'Discord Chat Channel',
