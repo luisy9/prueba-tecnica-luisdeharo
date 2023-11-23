@@ -1,7 +1,7 @@
 # Luis de Haro Prueba técnica Europe Language Jobs
 
 ## Arrancar proyecto
-
+- Este proyecto se tiene que arranca en un entorno de php como XAMPP -
 - npm i -> instalar las dependencias
 - php artisan serve -> comando para iniciar el backend de Laravel.
 - php artisan migrate -> comando para agregar las tablas a la base de datos.
@@ -25,7 +25,6 @@
 
 ## Cosas a destacar.
 - A pesar de no haber utilizado antes Quasar me he sabiado adaptar, aunque he tenido dificultades.
-
 <!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
