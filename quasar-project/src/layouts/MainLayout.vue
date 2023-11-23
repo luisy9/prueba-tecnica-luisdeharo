@@ -63,10 +63,10 @@ const linksList = [
     link: '/#/search'
   },
   {
-    title: 'Discord Chat Channel',
+    title: 'EuropeLangueJobs',
     caption: 'chat.quasar.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '/#/vista'
   },
   {
     title: 'Forum',
