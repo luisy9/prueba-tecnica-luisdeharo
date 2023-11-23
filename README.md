@@ -1,4 +1,6 @@
-## Luis de Haro Prueba técnica Europe Language Jobs
+# Luis de Haro Prueba técnica Europe Language Jobs
+
+## Arrancar proyecto
 
 - npm i -> instalar las dependencias
 - php artisan serve -> comando para iniciar el backend de Laravel.
@@ -7,7 +9,7 @@
 - cd /quasar-project 
 - quasar dev -> para iniciar el proyecto de quasar, donde se encuentra en front-end
 
-## Funcionamiento:
+## Lo primero que veremos:
 - Tenemos la carpeta de quasar donde esta el front-end, si lo levantamos con quasar dev veremos esto:
 ![Alt text](image.png)
 ## Tareas: 
