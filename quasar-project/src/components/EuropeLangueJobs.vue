@@ -40,68 +40,120 @@
       </div>
     </nav>
   </header>
-  <div class="box">
+  <div class="">
     <div class="banner_europe">
       <!-- <h1>hola</h1> -->
-      <div class="row">
-        <div class="col-6"><h1>Hola</h1></div>
-        <div class="col-6"><h1>Hola</h1></div>
+      <div class="container">
+        <div class="row banner-container pt-4">
+          <div class="col-md-5 col-xs-12">
+            <h1 class="title">
+              Find the perfect employee in our database of more than 25,000 new
+              multilingual candidates each month.
+            </h1>
+            <button class="btn btn-light" type="button">POST A JOB</button>
+          </div>
+          <div class="col-md-5 offset-md-2 col-xs-12">
+            <div class="item-list">
+              <i class="bi bi-people-fill"></i>
+              <span
+                ><strong>+ 2,500<br /> </strong>companies posting in more than
+                48 countries</span
+              >
+            </div>
+            <div class="item-list">
+              <span
+                ><strong>Post with ease<br /> </strong>Publish a job advert in
+                just 2 minutes
+              </span>
+            </div>
+            <div class="item-list">
+              <span
+                ><strong>+ 50,000<br /> </strong>candidate applications per
+                month
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="pt-5">
-        <!-- <q-carousel
-                        v-model="slide"
-                        animated
-                        arrows
-                        infinite
-                        autoplay
-                        autoplay-interval="3000"
-                        style="max-width: 100%; background: transparent"
-                      >
-                        <q-carousel-slide>
-                          <img
-                            src="../assets/apple.svg"
-                            alt="Apple Icon"
-                            style="
-                              max-width: 50px;
-                              max-height: 50px;
-                              margin: auto;
-                            "
-                          />
-                        </q-carousel-slide>
-                        <q-carousel-slide>
-                          <img
-                            src="../assets/apple.svg"
-                            alt="Apple Icon"
-                            style="
-                              max-width: 50px;
-                              max-height: 50px;
-                              margin: auto;
-                            "
-                          />
-                        </q-carousel-slide>
-                        <q-carousel-slide>
-                          <img
-                            src="../assets/apple.svg"
-                            alt="Apple Icon"
-                            style="
-                              max-width: 50px;
-                              max-height: 50px;
-                              margin: auto;
-                            "
-                          />
-                        </q-carousel-slide>
-
-                        <q-carousel-slide>
-                          <q-icon
-                            name="apple"
-                            size="3em"
-                            class="text-black"
-                          ></q-icon>
-                        </q-carousel-slide>
-                      </q-carousel> -->
+      <div class="">
+        <div class="pb-5">
+          <div class="container">
+            <div
+              id="carouselExample"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div class="d-flex justify-content-between">
+                    <img
+                      src="../assets/logo-top-company-apple-609-1600.svg"
+                      class="d-block w-20 logo_companies"
+                      alt="Image 1"
+                    />
+                    <img
+                      src="../assets/logo-ttec-611-874.svg"
+                      class="d-block w-20 logo_companies"
+                      alt="Image 2"
+                    />
+                    <img
+                      src="../assets/logo-agoda-607-4993.svg"
+                      class="d-block w-20 logo_companies"
+                      alt="Image 3"
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="d-flex justify-content-between"
+                    data-bs-interval="2000"
+                  >
+                    <img
+                      src="../assets/airproducts-logo-612.svg"
+                      class="d-block w-20 logo_companies"
+                      alt="Image 4"
+                    />
+                    <img
+                      src="../assets/top-companies-posting-foundever-portugal-610-9042.svg"
+                      class="d-block w-20 logo_companies"
+                      alt="Image 5"
+                    />
+                    <img
+                      src="../assets/logicmelon.svg"
+                      class="d-block w-20 logo_companies"
+                      alt="Image 6"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -396,7 +448,6 @@
               </div>
             </div>
           </div>
-          <!-- row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-5 -->
         </footer>
         <hr
           style="
@@ -476,8 +527,9 @@ button {
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
-  padding: 15px 75px;
-  /* margin-top: 30px; */
+  padding: 14px 75px;
+  margin-top: 30px;
+  border: none;
 }
 
 .button-learmore {
@@ -524,30 +576,30 @@ button {
   height: 100%;
   position: relative;
   background-image: url("../assets/bannerEurope.jpg");
+  background-color: rgba(12, 56, 102, 0.5);
 }
 
 .banner_europe::before {
-  /* content: "";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; */
-  /* background-color: rgb(64,146,199); */
-  /* background-color: rgba(3, 82, 134, 0.685); */
+  height: 100%;
+  background-color: rgba(12, 56, 102, 0.5);
+  z-index:1;
+  pointer-events: none;
 }
 
 .container {
-  /* transform: translate(-50%, -50%); */
+  position: relative;
+  z-index:2;
   color: white;
   z-index: 999;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 1; */
+}
+
+.logo_companies {
+  max-height: 80px;
 }
 
 .banner-container {
@@ -571,7 +623,6 @@ button {
 }
 
 .text-info {
-  /* margin-top: 30px; */
   text-align: start;
   margin-top: 50px;
 }
