@@ -8,10 +8,10 @@ const routes = [
       { path: '/search', component: () => import('components/FilterDogs.vue') }
     ]
   },
-  // {
-  //   path: '/search',
-  //   component: () => import('components/FilterDogs.vue'),
-  // },
+  {
+    path: '/vista',
+    component: () => import('components/EuropeLangueJobs.vue'),
+  },
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')
