@@ -30,7 +30,7 @@
             <div class="q-gutter-sm radios">
               <q-input
                 v-model="filtroRaza"
-                label="Filtrar la raza"
+                label="Filtra..."
                 @input="dogSearch"
                 outlined
                 dense
@@ -48,52 +48,34 @@
             "
           >
             <div v-if="this.columnasUnicas">
-              <q-table :rows="perroFil.valores" row-key="id">
-                <template v-slot:body="props">
-                  <q-tr :props="props">
-                    <q-td>
-                      {{ props.row }}
-                    </q-td>
-                  </q-tr>
-                </template>
-              </q-table>
+              {{ console.log(this.perroFil.valores) }}
+              <q-card
+                v-for="perroFi in perroFil.valores"
+                :key="perroFi.id"
+                class="my-card"
+              >
+                <img :src="`../../../${perroFi.foto}`" />
+
+                <q-card-section>
+                  <div class="text-h6">
+                    {{ perroFil.nombreColumna }} {{ perroFi }}
+                  </div>
+                </q-card-section>
+              </q-card>
             </div>
-            <!-- <q-table :rows="this.perros" row-key="id">
-              <template v-slot:body="props">
-                <q-tr :props="props">
-                  <q-td v-for="columna in columnas" :key="columna.field">
-                    <q-td v-if="columna.name === 'foto'">
-                      <img
-                        :src="`../../../../${props.row[columna.field]}`"
-                        style="max-width: 100px; max-height: 100px"
-                      />
-                    </q-td>
-                    <q-td>
-                      {{ props.row[columna.field] }}
-                    </q-td>
-                  </q-td>
-                </q-tr>
-              </template>
-            </q-table> -->
           </div>
           <div v-else>
-            <q-table :rows="this.perros" row-key="id">
-              <template v-slot:body="props">
-                <q-tr :props="props">
-                  <q-td v-for="columna in columnas" :key="columna.field">
-                    <q-td v-if="columna.name === 'foto'">
-                      <img
-                        :src="`../../../../${props.row[columna.field]}`"
-                        style="max-width: 100px; max-height: 100px"
-                      />
-                    </q-td>
-                    <q-td>
-                      {{ props.row[columna.field] }}
-                    </q-td>
-                  </q-td>
-                </q-tr>
-              </template>
-            </q-table>
+            <q-card v-for="perro in perros" :key="perro.id" class="my-card">
+              <img :src="`../../../${perro.foto}`" />
+
+              <q-card-section>
+                <div class="text-h6">Raza: {{ perro.raza }}</div>
+                <div class="text-subtitle2">Tamaño: {{ perro.tamaño }}</div>
+                <div class="text-subtitle2">
+                  Color del Pelo: {{ perro.color_del_pelo }}
+                </div>
+              </q-card-section>
+            </q-card>
           </div>
         </div>
       </q-page>
