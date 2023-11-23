@@ -42,13 +42,35 @@
         <div class="q-pa-md">
           <div
             v-if="
+              (buttonClicked && opcion === '') || opcion === '' || opcion === ''
+            "
+          >
+            <q-card
+              v-for="perFiltrado in perrosFiltrado"
+              :key="perFiltrado.id"
+              class="my-card"
+            >
+              <img :src="`../../../${perFiltrado.foto}`" />
+
+              <q-card-section>
+                <div class="text-h6">Raza: {{ perFiltrado.raza }}</div>
+                <div class="text-subtitle2">
+                  Tamaño: {{ perFiltrado.tamaño }}
+                </div>
+                <div class="text-subtitle2">
+                  Color del Pelo: {{ perFiltrado.color_del_pelo }}
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div
+            v-if="
               opcion === 'raza' ||
               opcion === 'tamaño' ||
-              opcion === 'color_del_pelo'
+              (opcion === 'color_del_pelo' && buttonClicked === false)
             "
           >
             <div v-if="this.columnasUnicas">
-              {{ console.log(this.perroFil.valores) }}
               <q-card
                 v-for="perroFi in perroFil.valores"
                 :key="perroFi.id"
@@ -65,17 +87,19 @@
             </div>
           </div>
           <div v-else>
-            <q-card v-for="perro in perros" :key="perro.id" class="my-card">
-              <img :src="`../../../${perro.foto}`" />
+            <div v-if="perros.length > 0 && buttonClicked === false">
+              <q-card v-for="perro in perros" :key="perro.id" class="my-card">
+                <img :src="`../../../${perro.foto}`" />
 
-              <q-card-section>
-                <div class="text-h6">Raza: {{ perro.raza }}</div>
-                <div class="text-subtitle2">Tamaño: {{ perro.tamaño }}</div>
-                <div class="text-subtitle2">
-                  Color del Pelo: {{ perro.color_del_pelo }}
-                </div>
-              </q-card-section>
-            </q-card>
+                <q-card-section>
+                  <div class="text-h6">Raza: {{ perro.raza }}</div>
+                  <div class="text-subtitle2">Tamaño: {{ perro.tamaño }}</div>
+                  <div class="text-subtitle2">
+                    Color del Pelo: {{ perro.color_del_pelo }}
+                  </div>
+                </q-card-section>
+              </q-card>
+            </div>
           </div>
         </div>
       </q-page>
@@ -94,9 +118,13 @@ export default {
       filtroPelo: "",
       opcion: "",
       perros: [],
+      perrosFiltrado: [],
       perroFil: [],
       columnas: [],
       columnasUnicas: [],
+      found: false,
+      requerido: null,
+      buttonClicked: false,
     };
   },
 
@@ -116,11 +144,21 @@ export default {
 
   methods: {
     filterDog() {
-      axios
-        .get(`http://127.0.0.1:8000/api/filtroDog/${this.filtroRaza}`)
-        .then((response) => {
-          console.log(response);
+      if (this.filtroRaza.trim() === "") {
+        this.requerido = true;
+      } else {
+        this.perrosFiltrado = [];
+        this.perros.forEach((e) => {
+          Object.keys(e).forEach((v) => {
+            if (e[v] === this.filtroRaza) {
+              this.found = true;
+              this.perrosFiltrado.push(e);
+            }
+          });
         });
+        this.buttonClicked = true;
+        console.log(this.perrosFiltrado);
+      }
     },
 
     async handleRadioClick(opcion) {

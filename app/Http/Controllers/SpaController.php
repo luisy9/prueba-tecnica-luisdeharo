@@ -59,11 +59,9 @@ class SpaController extends Controller
 
     public function filtroDog($filtroRaza)
     {
-        $perros = Perros::where('tamaño', $filtroRaza)
-            ->where('color_del_pelo', $filtroRaza)
-            ->where('tamaño', $filtroRaza)
-            ->get();
+        
+        // $perros = Perros::where('tamaño', $filtroRaza);
 
-        return $perros;
+        // return $perros;
     }
 }
