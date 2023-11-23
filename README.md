@@ -15,11 +15,11 @@
 2. Filtrado de perros
 3. Maquetacion de la vista de https://www.europelanguagejobs.com/companies
 
-- Las tres tareas estan nombradas en el navbar horizontal de la app.
+- Ubicacion de las Tareas.
 
-- Hay que revisar que el formulario se envie correctamente, es decir que se cree un perro
-- El filtrado de el perro funcione correctamente.
-- La maquetación de la vista https://www.europelanguagejobs.com/companies es correcta.
+- (Home) Hay que revisar que el formulario se envie correctamente, es decir que se cree un perro
+- (Buscar) El filtrado de el perro funcione correctamente.
+- (EuropaLangueJobsLa) maquetación de la vista https://www.europelanguagejobs.com/companies es correcta.
 
 
 <!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
