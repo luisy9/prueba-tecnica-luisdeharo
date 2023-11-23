@@ -1,8 +1,12 @@
 <template>
-  <div class="">
+  <header>
     <nav class="navbar navbar-expand-lg custom-navbar">
       <div class="container">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#"
+          ><img
+            src="../assets/logo-elj-white.svg"
+            style="height: auto; width: 60px"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,9 +21,7 @@
         <div class="collapse navbar-collapse ms-auto" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Inicio <span class="sr-only">Jobs</span></a
-              >
+              <a class="nav-link" href="#"><span class="sr-only">Jobs</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link px-4" href="#">Candidates</a>
@@ -37,100 +39,69 @@
         </div>
       </div>
     </nav>
-  </div>
-  <div class="">
-    <div class="box">
-      <div class="banner_europe">
-        <div class="">
-          <div class="container">
-            <div class="text-center">
-              <div class="container px-4 text-center">
-                <div class="row gx-5">
-                  <div class="col-md-6 order-md-2">
-                    <div class="col">
-                      <div class="p-3">Custom column paddingsss</div>
-                    </div>
+  </header>
+  <div class="box">
+    <div class="banner_europe">
+      <!-- <h1>hola</h1> -->
+      <div class="row">
+        <div class="col-6"><h1>Hola</h1></div>
+        <div class="col-6"><h1>Hola</h1></div>
+      </div>
+    </div>
 
-                    <div class="col">
-                      <div class="p-3">Custom column padding</div>
-                    </div>
+    <div class="row">
+      <div class="pt-5">
+        <!-- <q-carousel
+                        v-model="slide"
+                        animated
+                        arrows
+                        infinite
+                        autoplay
+                        autoplay-interval="3000"
+                        style="max-width: 100%; background: transparent"
+                      >
+                        <q-carousel-slide>
+                          <img
+                            src="../assets/apple.svg"
+                            alt="Apple Icon"
+                            style="
+                              max-width: 50px;
+                              max-height: 50px;
+                              margin: auto;
+                            "
+                          />
+                        </q-carousel-slide>
+                        <q-carousel-slide>
+                          <img
+                            src="../assets/apple.svg"
+                            alt="Apple Icon"
+                            style="
+                              max-width: 50px;
+                              max-height: 50px;
+                              margin: auto;
+                            "
+                          />
+                        </q-carousel-slide>
+                        <q-carousel-slide>
+                          <img
+                            src="../assets/apple.svg"
+                            alt="Apple Icon"
+                            style="
+                              max-width: 50px;
+                              max-height: 50px;
+                              margin: auto;
+                            "
+                          />
+                        </q-carousel-slide>
 
-                    <div class="col">
-                      <div class="p-3">Custom column padding</div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 order-md-1 d-md-block">
-                    <div class="p-3">
-                      <h1 class="title">
-                        Find the perfect employee in our database of more than
-                        25,000 new multilingual candidates each month.
-                      </h1>
-                      <button class="btn btn-light" type="button">
-                        POST A JOB
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="pt-5">
-                    <q-carousel
-                      v-model="slide"
-                      animated
-                      arrows
-                      infinite
-                      autoplay
-                      autoplay-interval="3000"
-                      style="max-width: 100%; background: transparent"
-                    >
-                      <q-carousel-slide>
-                        <img
-                          src="../assets/apple.svg"
-                          alt="Apple Icon"
-                          style="
-                            max-width: 50px;
-                            max-height: 50px;
-                            margin: auto;
-                          "
-                        />
-                      </q-carousel-slide>
-                      <q-carousel-slide>
-                        <img
-                          src="../assets/apple.svg"
-                          alt="Apple Icon"
-                          style="
-                            max-width: 50px;
-                            max-height: 50px;
-                            margin: auto;
-                          "
-                        />
-                      </q-carousel-slide>
-                      <q-carousel-slide>
-                        <img
-                          src="../assets/apple.svg"
-                          alt="Apple Icon"
-                          style="
-                            max-width: 50px;
-                            max-height: 50px;
-                            margin: auto;
-                          "
-                        />
-                      </q-carousel-slide>
-
-                      <q-carousel-slide>
-                        <q-icon
-                          name="apple"
-                          size="3em"
-                          class="text-black"
-                        ></q-icon>
-                      </q-carousel-slide>
-                    </q-carousel>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                        <q-carousel-slide>
+                          <q-icon
+                            name="apple"
+                            size="3em"
+                            class="text-black"
+                          ></q-icon>
+                        </q-carousel-slide>
+                      </q-carousel> -->
       </div>
     </div>
   </div>
@@ -189,24 +160,253 @@
     </div>
   </div>
   <div class="">
-    <div class="row">
+    <div class="row pb-5">
       <div class="col-12 pt-5">
-        <h2 class="text-center pt-5 titleELJs">
+        <h2 class="text-center pt-5 pb-5 titleELJs">
           <strong>Tell us about</strong> your needs!
         </h2>
-        <q-form>
-          <q-input label="Nombre" outlined dense required />
-          <q-input label="Email" outlined dense type="email" required />
-          <q-input label="Contraseña" outlined dense type="password" required />
-          <q-input label="Descripción" outlined dense textarea />
-          <q-checkbox label="Aceptar condiciones legales" />
-          <q-btn
-            type="submit"
-            color="primary"
-            label="Enviar Mensaje"
-            class="q-mt-md"
-          />
-        </q-form>
+
+        <div class="row">
+          <div
+            class="col-md-6 col-xs-12 offset-md-3 form-container"
+            style="background-color: #f4f4f4; padding: 30px"
+          >
+            <q-form>
+              <div class="row">
+                <div class="col-md-6 col-xs-12 block-fields">
+                  <div
+                    class="q-field row no-wrap items-start q-mb-lg q-field-responsive q-field-no-label"
+                  >
+                    <q-input label="Your name" />
+                    <q-input label="Company name" type="text" required />
+                    <q-input label="Email" type="email" required />
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12 block-fields">
+                  <q-input label="Descripción" textarea />
+                  <div class="">
+                    <div class="row col">
+                      <div class="q-field-content col-xs-12 col-sm">
+                        <div class="q-pa-md">
+                          <div class="q-gutter-sm">
+                            <q-checkbox
+                              v-model="orange"
+                              label="I accept the Legal Conditions"
+                              color="orange"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <q-btn
+                    type="submit"
+                    rounded
+                    label="SEND MESSAGE"
+                    class="q-mt-md button-form"
+                  />
+                </div>
+              </div>
+            </q-form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid pt-4">
+      <h2 class="text-center pt-5 titleELJs">
+        <strong>ATS Partners & API Solutions</strong>
+      </h2>
+      <div class="container">
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="d-flex justify-content-between">
+                <img
+                  src="../assets/hrlink.svg"
+                  class="d-block w-20"
+                  alt="Image 1"
+                />
+                <img
+                  src="../assets/equest.png"
+                  class="d-block w-20"
+                  alt="Image 2"
+                />
+                <img
+                  src="../assets/recruitly.png"
+                  class="d-block w-20"
+                  alt="Image 3"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="d-flex justify-content-between"
+                data-bs-interval="2000"
+              >
+                <img
+                  src="../assets/hrlink.svg"
+                  class="d-block w-20"
+                  alt="Image 4"
+                />
+                <img
+                  src="../assets/lever.png"
+                  class="d-block w-20"
+                  alt="Image 5"
+                />
+                <img
+                  src="../assets/logicmelon.svg"
+                  class="d-block w-20"
+                  alt="Image 6"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div
+          class="text-center col-12"
+          style="padding: 50px 0; background-color: #007cc0"
+        >
+          <span class="fs-2" style="color: #fff"
+            >Together, your hires, our goal!</span
+          >
+        </div>
+      </div>
+      <div class="container-fluid" style="background-color: #ebeff3">
+        <hr
+          style="
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+            color: #0c3866;
+            height: 1px;
+          "
+        />
+        <footer class="container">
+          <div class="">
+            <div
+              class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-5"
+            >
+              <div class="col-2 mb-3 mx-5">
+                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-2 mb-3 mx-5">
+                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <p style="color: #0c3866" class="pt-4">
+                    <b>STAY CONNECTED</b>
+                  </p>
+                  <li>
+                    <a>hola</a>
+                    <a>hola</a>
+                    <a>hola</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col mb-3 mx-5">
+                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <p style="color: #0c3866" class="pt-4">
+                    <b>DOWNLOAD THE APP</b>
+                  </p>
+                  <li>
+                    <a>hola</a>
+                    <a>hola</a>
+                    <a>hola</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col mb-3 mx-5">
+                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-5 -->
+        </footer>
+        <hr
+          style="
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+            color: #0c3866;
+            height: 1px;
+          "
+        />
       </div>
     </div>
   </div>
@@ -222,6 +422,7 @@ export default defineComponent({
   setup() {
     return {
       slide: ref(1),
+      orange: ref(false),
     };
   },
 });
@@ -229,6 +430,11 @@ export default defineComponent({
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
 
 * {
   font-family: "Lato", sans-serif;
@@ -284,6 +490,17 @@ button {
   margin-left: 30px;
 }
 
+.button-form {
+  background: #517091;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  margin-left: 30px;
+}
+
 .nav-link {
   color: white;
   font-size: 14px;
@@ -300,7 +517,7 @@ button {
 }
 
 .banner_europe {
-  /* max-height: auto; */
+  max-height: auto;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -310,14 +527,14 @@ button {
 }
 
 .banner_europe::before {
-  content: "";
+  /* content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; */
   /* background-color: rgb(64,146,199); */
-  background-color: rgba(3, 82, 134, 0.685);
+  /* background-color: rgba(3, 82, 134, 0.685); */
 }
 
 .container {
@@ -376,5 +593,19 @@ button {
 
 .div-carrusel {
   margin-top: 200px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
 }
 </style>
