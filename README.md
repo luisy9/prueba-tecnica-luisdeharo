@@ -15,7 +15,7 @@
 2. Filtrado de perros
 3. Maquetacion de la vista de https://www.europelanguagejobs.com/companies
 
-- Ubicacion de las Tareas.
+- Ubicacion de las Tareas en el NavBar.
 
 - (Home) Hay que revisar que el formulario se envie correctamente, es decir que se cree un perro
 - (Buscar) El filtrado de el perro funcione correctamente.
