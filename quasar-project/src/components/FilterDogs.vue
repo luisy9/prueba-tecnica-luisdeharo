@@ -70,7 +70,7 @@
               (opcion === 'color_del_pelo' && buttonClicked === false)
             "
           >
-            <div v-if="this.columnasUnicas">
+            <div>
               <q-card
                 v-for="perroFi in perroFil.valores"
                 :key="perroFi.id"
@@ -166,22 +166,13 @@ export default {
         .get(`http://127.0.0.1:8000/api/getColum/${opcion}`)
         .then((response) => {
           this.perroFil = response.data;
-          // console.log(this.perros.nombreColumna);
-
-          // for (let i = 0; i < this.perros.length; i++) {
-          //   console.log(this.perros[i]);
-          // }
-          // console.log(this.columnas);
-          // Object.keys(this.perros[0]).map((e, index)=> {
-          //   console.log()
-          // })
           this.columnasUnicas = {
             name: this.perroFil.nombreColumna,
             label: this.perroFil.nombreColumna,
             align: "left",
             field: this.perroFil.nombreColumna,
           };
-          // console.log(this.columnas);
+          console.log(this.columnas, "hhhhhhhh");
         });
     },
   },

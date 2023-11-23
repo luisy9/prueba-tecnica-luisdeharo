@@ -264,7 +264,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid pt-4">
+    <div class="pt-4">
       <h2 class="text-center pt-5 titleELJs">
         <strong>ATS Partners & API Solutions</strong>
       </h2>
@@ -347,7 +347,7 @@
           >
         </div>
       </div>
-      <div class="container-fluid" style="background-color: #ebeff3">
+      <div class="d-flex" style="background-color: #ebeff3">
         <hr
           style="
             box-sizing: content-box;
@@ -357,27 +357,28 @@
             height: 1px;
           "
         />
-        <footer class="container">
+        <footer class="container pt-5">
           <div class="">
             <div
-              class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-5"
+              class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top"
             >
               <div class="col-2 mb-3 mx-5">
-                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
-                  </li>
-                </ul>
+                <img
+                  src="../assets/logo-elj-no-bg.png"
+                  alt="logo-europe-league"
+                  style="height: 100px"
+                />
+                <p style="color: #007cc0">
+                  <b
+                    >Europe Language Jobs - the job board for expat jobs
+                    abroad</b
+                  >
+                </p>
+                <p style="color: #0c3866">
+                  We help expats find jobs in Europe using their native language
+                  and gain international experience by working in a foreign
+                  country.
+                </p>
               </div>
               <div class="col-2 mb-3 mx-5">
                 <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
@@ -386,13 +387,10 @@
                     <a class="nav-link p-0 text-muted">Find a Job</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Create an account</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Career advice</a>
                   </li>
                   <p style="color: #0c3866" class="pt-4">
                     <b>STAY CONNECTED</b>
@@ -405,19 +403,16 @@
                 </ul>
               </div>
               <div class="col mb-3 mx-5">
-                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
+                <p style="color: #0c3866"><b>FOR EMPLOYERS</b></p>
                 <ul class="nav flex-column">
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Post a job</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Create an account</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Hiring solutions</a>
                   </li>
                   <p style="color: #0c3866" class="pt-4">
                     <b>DOWNLOAD THE APP</b>
@@ -430,19 +425,22 @@
                 </ul>
               </div>
               <div class="col mb-3 mx-5">
-                <p style="color: #0c3866"><b>FOR JOB SEEKERS</b></p>
+                <p style="color: #0c3866"><b> EUROPE LANGUAGE JOBS</b></p>
                 <ul class="nav flex-column">
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">About us</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">FQA</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Legal Conditions</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a class="nav-link p-0 text-muted">Find a Job</a>
+                    <a class="nav-link p-0 text-muted">Cookies Policy</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a class="nav-link p-0 text-muted">Contact us</a>
                   </li>
                 </ul>
               </div>
@@ -587,13 +585,13 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(12, 56, 102, 0.5);
-  z-index:1;
+  z-index: 1;
   pointer-events: none;
 }
 
 .container {
   position: relative;
-  z-index:2;
+  z-index: 2;
   color: white;
   z-index: 999;
 }
