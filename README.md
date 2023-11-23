@@ -10,12 +10,12 @@
 ## Funcionamiento:
 - Tenemos la carpeta de quasar donde esta el front-end, si lo levantamos con quasar dev veremos esto:
 ![Alt text](image.png)
-- Tareas: 
+## Tareas: 
 1. Crear un perro con sus respectivos campos, que eso esta en la pagina principal.
 2. Filtrado de perros
 3. Maquetacion de la vista de https://www.europelanguagejobs.com/companies
 
-- Ubicacion de las Tareas en el NavBar.
+## Ubicacion de las Tareas en el NavBar.
 
 - (Home) Hay que revisar que el formulario se envie correctamente, es decir que se cree un perro
 - (Buscar) El filtrado de el perro funcione correctamente.
