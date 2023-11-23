@@ -42,7 +42,6 @@
   </header>
   <div class="">
     <div class="banner_europe">
-      <!-- <h1>hola</h1> -->
       <div class="container">
         <div class="row banner-container pt-4">
           <div class="col-md-5 col-xs-12">
@@ -359,9 +358,7 @@
         />
         <footer class="container pt-5">
           <div class="">
-            <div
-              class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top"
-            >
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top">
               <div class="col-2 mb-3 mx-5">
                 <img
                   src="../assets/logo-elj-no-bg.png"
@@ -396,9 +393,11 @@
                     <b>STAY CONNECTED</b>
                   </p>
                   <li>
-                    <a>hola</a>
-                    <a>hola</a>
-                    <a>hola</a>
+                    <a><i class="bi bi-twitter icono-azul px-2"></i></a>
+                    <a><i class="bi bi-facebook icono-azul px-2"></i></a>
+                    <a><i class="bi bi-tiktok icono-azul px-2"></i></a>
+                    <a><i class="bi bi-tiktok icono-azul px-2"></i></a>
+                    <a><i class="bi bi-tiktok icono-azul px-2"></i></a>
                   </li>
                 </ul>
               </div>
@@ -418,9 +417,20 @@
                     <b>DOWNLOAD THE APP</b>
                   </p>
                   <li>
-                    <a>hola</a>
-                    <a>hola</a>
-                    <a>hola</a>
+                    <button
+                      type="button"
+                      class="btn btn-secondary mx-1"
+                      style="padding: 10px; color: white"
+                    >
+                      Secondary
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      style="padding: 10px; color: white"
+                    >
+                      Secondary
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -479,6 +489,17 @@ export default defineComponent({
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.icono-azul {
+  color: #007cc0;
+  font-size: 1.2em;
+  text-align: start;
+}
+
+a:hover {
+  background-color: rgba(232, 244, 255, 0.199);
+  border-radius: 5px;
+}
 
 .app {
   width: 100%;
