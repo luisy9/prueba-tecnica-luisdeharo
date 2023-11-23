@@ -1,7 +1,7 @@
 # Luis de Haro Prueba técnica Europe Language Jobs
 
 ## Arrancar proyecto
-- Este proyecto se tiene que arranca en un entorno de php como XAMPP -
+- Este proyecto se tiene que arranca en un entorno de php como XAMPP
 - npm i -> instalar las dependencias
 - php artisan serve -> comando para iniciar el backend de Laravel.
 - php artisan migrate -> comando para agregar las tablas a la base de datos.
