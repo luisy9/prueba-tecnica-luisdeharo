@@ -1,4 +1,28 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Luis de Haro Prueba técnica Europe Language Jobs
+
+- npm i -> instalar las dependencias
+- php artisan serve -> comando para iniciar el backend de Laravel.
+- php artisan migrate -> comando para agregar las tablas a la base de datos.
+
+- cd /quasar-project 
+- quasar dev -> para iniciar el proyecto de quasar, donde se encuentra en front-end
+
+## Funcionamiento:
+- Tenemos la carpeta de quasar donde esta el front-end, si lo levantamos con quasar dev veremos esto:
+![Alt text](image.png)
+- Tareas: 
+1. Crear un perro con sus respectivos campos, que eso esta en la pagina principal.
+2. Filtrado de perros
+3. Maquetacion de la vista de https://www.europelanguagejobs.com/companies
+
+- Las tres tareas estan nombradas en el navbar horizontal de la app.
+
+- Hay que revisar que el formulario se envie correctamente, es decir que se cree un perro
+- El filtrado de el perro funcione correctamente.
+- La maquetación de la vista https://www.europelanguagejobs.com/companies es correcta.
+
+
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -63,4 +87,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
